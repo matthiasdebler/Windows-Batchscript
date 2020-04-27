@@ -1,0 +1,27 @@
+Batchdatei als Dienst starten
+
+Folgende Programme (Microsoft) sind dafür nötig 
+
+instsrv.exe
+srvany.exe
+
+Selbst anzulegen ist die vmstart.cmd
+
+Diese Datei ist die fest verdrahtete Startdatei des Dienstes. Hier kann über einen Call-Befehl die eigentliche zu startende Batchdatei eingetragen werden.
+
+Und so gehts:
+
+Alle Dateien instsrv.exe, srvany.exe,vmstart.cmd, regkey.reg in das Zielverzeichnis kopieren.
+
+Zuerst wird über eine Batchdatei der Dienst angelegt:
+
+c:\vmservice\instsrv [Dienstname] c:\vmservice\srvany.exe
+
+dann wird der nachfolgende Registry-Key eingetragen ( einfach eine regkey.reg erstellen oder manuell eingeben):
+
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\VMstart\Parameters]
+"Application"="\"c:\\zielverzeichnis\\vmstart.cmd\""
+
+
+Dienst starten, fertig 
