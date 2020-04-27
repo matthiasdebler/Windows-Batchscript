@@ -7,7 +7,7 @@ rem
 Blat -install backup.host  exad@mailhost.de
 rem
 rem
-blat "C:\acs26_scheduler.log" -to exad@mailhost.de  -server domino -subject "ACS 26 Logdatei taegliche Auslese  Gateways"
+blat "C:\acs26_scheduler.log" -to exad@mailhost.de  -server absendername -subject "ACS 26 Logdatei taegliche Auslese  Gateways"
 rem
 del C:\acs26_scheduler.log
 del "C:\Programme\Siemeca\Acs26 2.2\acs26_scheduler.log"
