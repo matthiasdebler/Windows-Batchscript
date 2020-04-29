@@ -3,13 +3,13 @@ GET test:<br>
 
 <FORM ACTION="/scripts/blat.exe" METHOD="GET">
 Absendermailadresse
-Sender: <INPUT TYPE="text" SIZE="50" NAME="Sender" VALUE="myname@mydomain.com">
+Sender: <INPUT TYPE="text" SIZE="50" NAME="Sender" VALUE="absender@server.com">
 <br>
-To:  <INPUT TYPE="text" SIZE="50" NAME="TO" VALUE="myname2@yourdomain.com">
+To:  <INPUT TYPE="text" SIZE="50" NAME="TO" VALUE="empfaenger@server.com">
 <br>
-Subject:    <INPUT TYPE="text" SIZE="50" NAME="Blat_Subject" VALUE="The sujet : blat cgi demo">
+Subject:    <INPUT TYPE="text" SIZE="50" NAME="Betreffzeile" VALUE="The sujet : blat cgi demo">
 <br>
-SMTP Server: <INPUT TYPE="text" SIZE="50" NAME="SERVER" VALUE="smtp.site1.csi.com">
+SMTP Server: <INPUT TYPE="text" SIZE="50" NAME="SERVER" VALUE="smtp.server.com">
 <br>
 user var2:    <INPUT TYPE="text" SIZE="50" NAME="Var2" VALUE="Var_2">
 <br>
