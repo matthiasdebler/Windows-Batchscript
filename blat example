@@ -1,0 +1,9 @@
+rem 
+rem path Variable eintragen in Systemsteuerung!
+rem
+rem
+rem
+Blat -install backup.wghalle  domcon01@e-zuku.de
+rem
+rem
+Blat "C:\Domaintest\body.txt" -to md@e-zuku.de  -server 192.168.20.179 -subject "Zustandsbericht Active Directory Domain  [Datum:%date%  Zeit:%time%] >>Protokoll im Anhang<<" -attach "C:\Domaintest\domain.pdf"
