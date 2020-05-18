@@ -1,0 +1,46 @@
+cd\
+cd Programme
+cd FTP_AC
+:start_schleife
+rem Model gateway: V8 User: root Passwort: 
+rem Model gateway: V9 User: user Passwort:
+time /T
+date /T
+
+
+
+rem #####################################################################
+rem Anfang für einmal Gatewayauslese 
+rem #####################################################################
+rem
+rem gateway: NW_10_002 - 
+rem setze Variable für Gatewaydaten
+rem Zielverzeichnis und IP Adresse
+set Zielverzeichnis=NW_100
+set IPadresse=21.8.11.3
+rem
+rem
+rem Verzeichnis vor Übertragung bereinigen
+del "C:\Programme\FTP_ACS26\siemeca.xml.gz"  /F /q
+rem Download vom Gateway
+wget ftp://user:fdgEr@%IPadresse%//tmp/siemeca.xml.gz 
+rem entpacken 
+C:\Programme\FTP_ACS26\gzip siemeca.xml.gz -d -q 
+rem dateinamen aus datum und Uhrzeit erzeugen
+rem xml datei in datumzeit.xml umbenennen
+set dateiname=%date:~6,4%%date:~3,2%%date:~0,2%
+for /F "tokens=1,2 delims=: " %%a in ('time /t') do set dateiname=%dateiname%%%a%%b
+ren siemeca.xml %dateiname%.xml
+rem verschieben in NW_xx Verzeichnis
+copy %dateiname%.xml "\\sql_serve\daten\%Zielverzeichnis%\" /Y
+rem Datenbereinigung
+del "C:\Programme\FTP_26\%dateiname%.xml"
+rem
+rem ###################################################################### 
+rem Ende für einmal Gatewayauslese 
+rem ######################################################################
+rem
+rem
+rem
+
+pause
