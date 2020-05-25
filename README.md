@@ -7,19 +7,25 @@ Mit Batch Dateien können einfache Abläufe in Microsoft Windows automatisiert w
 Windows Batch stammen aus dem MS-DOS Zeitalter. Zu dieser Zeit hatten Batch Dateien die Dateiendung .bat. Seit Windows 2000 wird die Endung .cmd verwendet. Zusätzlich gibt es die Möglichkeit Sprungmarken oder Variablen zu verwenden, bis hin zu komplexeren Abläufen. Ab einer gewissen Komplexität sind Batchdateien nicht mehr die erste Wahl. Als Nachfolger von Windows Batch gilt die Microsoft Power Shell.
 
 
-ier einige Befehle und eine kurze Beschreibung dazu:
+Hier einige Befehle und eine kurze Beschreibung dazu:
 
-  Befehl 	Beschreibung 	Betriebssysteme
+Befehl 	Beschreibung 	Betriebssysteme
+
 assoc 	Zeigt Dateierweitungszuordnungen an bzw. ändert sie 	XP/Vista/7/8/10
+
 at 	
 
 Mit AT können Befehle oder Programme zu einem bestimmten Termin gestartet werden. Diese werden dann in "Geplante Tasks" eingetragen
 
 (in Windows 8 sollte anstelle von AT schtasks verwendet werden)
 	XP/Vista/7
+
 attrib 	Zeigt Dateiattribute an bzw. ändert sie 	XP/Vista/7/8/10
+
 break 	Schaltet die erweiterte Überprüfung für STRG+C ein bzw. aus 	8/10
+
 cacls 	ändert Datei ACLs (Access Control List) oder zeigt sie an 	XP/Vista/7/8/10
+
 call 	ruft eine Batchdatei von einer anderen aus auf 	XP/Vista/7/8/10
 cd 	in ein anderes Verzeichnis wechseln; cd \ wechselt in das root Verzeichnis 	XP/Vista/7/8/10
 chcp 	wechselt die aktuelle Codepage oder zeigt deren Nummer an 	XP/Vista/7/8/10
